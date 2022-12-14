@@ -1,0 +1,21 @@
+table{
+    margin-top: 50px;
+    color: rgb(24, 17, 9);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    border-collapse: collapse;
+    background-color: rgb(243, 178, 210);
+    padding: 7px;
+    
+}
+
+td{
+    border: 1px solid rgb(61, 42, 78);
+    padding: 7px;
+
+}
+th{
+    border: 1px solid rgb(98, 121, 155);
+    background-color: rgb(241, 217, 228);
+    padding: 7px;
+}
