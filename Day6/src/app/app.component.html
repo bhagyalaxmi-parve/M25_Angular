@@ -1,0 +1,19 @@
+<h2>Angular Routing Example =></h2>
+<a [routerLink]="['/home']" >Home</a>&nbsp;
+
+<a [routerLink]="['/news']" >News</a>&nbsp;
+
+<a [routerLink]="['/notification']" >Notification</a>&nbsp;
+
+
+<a [routerLink]="['/contact-us']" >Contact-Us</a>
+<br>
+<br>
+<button (click)="display()">Home</button>&nbsp;
+
+<button (click)="display1()">News</button>&nbsp;
+<button (click)="display2()">Notification</button>&nbsp;
+<button (click)="display3()">Contact-Us</button>
+<div>
+  <router-outlet></router-outlet>
+</div>

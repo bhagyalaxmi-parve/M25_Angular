@@ -1,0 +1,26 @@
+
+body{
+    background-color: rgb(250, 225, 196);
+}
+table{
+    color: rgb(24, 17, 9);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    border-collapse: collapse;
+    background-color: rgb(243, 178, 210);
+    
+}
+
+td{
+    border: 1px solid rgb(61, 42, 78);
+
+
+}
+th{
+    border: 1px solid rgb(98, 121, 155);
+    background-color: rgb(241, 217, 228);
+}
+.one{
+    color:rgb(97, 19, 19);
+    background-color: rgb(187, 183, 183);
+}

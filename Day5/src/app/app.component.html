@@ -1,0 +1,34 @@
+
+
+
+<table border="1" >
+  
+  <thead  >
+   <h2>Student Details</h2>
+    
+    <tr>
+      
+      <th>ID</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Dob</th>
+      <th>City</th>
+      <th>Fee</th>
+      
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itr of students">
+      <td>{{itr.ID}}</td>
+      <td>{{itr.Name | uppercase | custompipe : itr.Gender }}</td>
+      <td>{{itr.Gender |uppercase}}</td>
+      <td>{{itr.Dob }}</td>
+      <td>{{itr.City | titlecase}}</td>
+      <!-- <td>{{itr.DOB }}</td> -->
+      <td>{{itr.Fee | currency:'INR':true}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <br>
+    <h3>Date Pipe:{{ today | date:'h:mm:ss'}}</h3>
+    <h3>Date:{{today | date}}</h3>

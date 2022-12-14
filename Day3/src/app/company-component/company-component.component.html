@@ -1,0 +1,50 @@
+<!-- <p>company-component works!</p> -->
+
+
+
+<h1>Data Binding</h1>
+<h3>A basic HTML table</h3>
+
+<table style="width:100%">
+  <tr>
+    
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>{{company}}</td>
+    <td>{{contact}}</td>
+    <td>{{country}}</td>
+  </tr>
+  <tr>
+    <td>{{company1}}</td>
+    <td>{{contact1}}</td>
+    <td>{{country1}}</td>
+  </tr>
+  
+</table>
+
+<p>To understand the example better, we have added borders to the table.</p>
+<br>
+<div>
+  <h1>Class Binding</h1>
+   <button class="colorclass">{{button}}</button><br><br>
+   <h1>Event Binding</h1>
+   <button (click)="onClick()">Print</button>
+   
+     
+ </div>
+ <img alt="item" [src]="itemUrl">
+ <div>
+  <!-- two-ay-binding ...it is a combintion of property[] and event binding() -->
+  <h1>Two way binding</h1>
+ fullName :<input [value]="FullName" (input)= "print()"><br>
+ <br>You have entered: {{FullName}}<br><br>
+
+
+ <!-- fullName :<input [(ngModel)]="twoway"><br><br> -->
+ <input [type]= "firstname" [(ngModel)]="twoway">
+ {{twoway}}
+ 
+ </div>
