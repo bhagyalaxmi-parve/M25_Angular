@@ -1,0 +1,17 @@
+<p>parent works!</p>
+
+<button (click)="updateUser()">Update</button>
+<app-child [userName]="userName"></app-child>
+<br>
+<br>
+
+
+<button (click)="destroy()">Destroy Child</button>
+
+
+<app-child *ngIf="!isChildDestroyed"
+          [userName]="userName">
+  <div #contentWrapper>Destroy</div>
+</app-child>
+
+<div *ngIf="isChildDestroyed"><b>Child component is destroyed!......</b></div>
