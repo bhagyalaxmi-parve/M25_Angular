@@ -1,0 +1,116 @@
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-size: 25px;">Employee Management System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <button class="btn btn-outline-primary  "  data-bs-toggle="modal" data-bs-target="#addEmployee" type="submit" >Add Employee</button>
+          </div>
+        </div>
+    </nav>
+
+
+
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Employee ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of empList">
+            <!-- interpolation is technique that the user to bind a value to UI elements -->
+            <td>{{employee.id}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.salary}}</td>
+            <td>
+                <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#editEmployee" (click)="editEmployee(employee)">Edit</button>
+                <button type="button" class="btn btn-danger" (click)="deleteEmployee(employee)">Delete</button>
+            </td>
+
+          </tr>
+          
+        </tbody>
+      </table>
+
+  
+  <!-- Add employee modal -->
+  <div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(163, 223, 198);">
+          <h5 class="modal-title" id="exampleModalLabel" >Add new Employee</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-color: rgb(189, 189, 159);">
+          
+            <form [formGroup]="empDetail" style="color: rgb(22, 11, 11); font-size: 19px;">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name </label>
+                    <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="emailHelp">
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email </label>
+                  <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Salary </label>
+                    <input type="text" formControlName="salary" class="form-control" id="email" aria-describedby="emailHelp">
+                  </div>
+                <div class="modal-footer" >
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="addEmployee()" >Add employee</button>
+                  </div>
+              </form>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Edit employee modal -->
+  <div class="modal fade" id="editEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: rgb(179, 226, 208);">
+          <h5 class="modal-title" id="exampleModalLabel" style="font-style: italic; ">Edit Employee Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-color: rgb(153, 153, 121);">
+
+            <form [formGroup]="empDetail" style="color: rgb(22, 11, 11); font-size: 19px;">
+                <div class="mb-3" >
+                    <label for="exampleInputEmail1" class="form-label">Name </label>
+                    <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="emailHelp">
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email </label>
+                  <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Salary </label>
+                    <input type="text" formControlName="salary" class="form-control" id="email" aria-describedby="emailHelp">
+                  </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" (click)="updateEmployee()" data-bs-dismiss="modal">Update </button>
+                  </div>
+              </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

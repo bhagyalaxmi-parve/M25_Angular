@@ -1,0 +1,18 @@
+
+
+
+
+table{
+   
+   font-size: large;
+}
+
+th{
+    font-style: italic;
+    background-color: rgb(127, 137, 151);
+    
+}
+td{
+    color: rgb(10, 24, 18);
+    background-color:  rgb(207, 213, 219);
+}
